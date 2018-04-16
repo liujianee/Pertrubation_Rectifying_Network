@@ -39,7 +39,7 @@ Directory structure of `--pert_test_dir`:
 
 ### TRAINING
 
-1. Edit [TRAINING configuration](https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/Inception/config.py). Set `--data_dir` to clean images, note that `--data_dir_1`~`--data_dir_4` are the augmentation images. `perturb_dir` and `pert_train_dir` have similar reference as in TESTING.
+1. Edit [TRAINING configuration](https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/Inception/config.py). Set `--data_dir` to clean images, note that `--data_dir_1`~`--data_dir_4` are the corner-cropped images used as data augmentation. `perturb_dir` and `pert_train_dir` have similar reference as in TESTING.
 
 2. Run [TRAINING script](https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/Inception/TRAIN_SCRIPT.sh).
 

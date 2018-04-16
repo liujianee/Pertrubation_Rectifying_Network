@@ -12,9 +12,9 @@ This repository contains the Tensorflow implementation of ["Defense against Univ
 
 1. Download pre-trained [Inception PRN models](https://drive.google.com/drive/folders/1hP8l1vwCVCHfqKGOHu2Fyk_e9x5CpyoL?usp=sharing) from google drive.
 
-2. Edit TESTING [script](https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/Inception/TESTING_fooling_rate/TEST_SCRIPT.sh), set --data_dir to the direcotry of clean images, and set --pert_test_dir to the directory of perturbation maps.
+2. Edit TESTING [script](https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/Inception/TESTING_fooling_rate/TEST_SCRIPT.sh), set -`-data_dir` to the direcotry of clean images, set `--perturb_dir` to the base pertubation directory, and set`--pert_test_dir` to the TESTING perturbation folder.
 
-Directory structure of clean images:
+Directory structure of `-data_dir`:
 
     ILSVRC2012_img
     ├── 1
@@ -26,12 +26,17 @@ Directory structure of clean images:
     ├── 3
     ├── ...
     └── 1000
-
  
-Directory structure of perturbation maps:
+Directory structure of `--pert_test_dir`:
 
     inception_L2_Pert
     ├── perturbation_map_1.npy 
     ├── perturbation_map_2.npy 
     └── ...
+
+4. Run TESTING [script](https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/Inception/TESTING_fooling_rate/TEST_SCRIPT.sh).
+
+
+### TRAINING
+
 

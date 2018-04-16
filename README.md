@@ -3,7 +3,7 @@ This repository contains the Tensorflow implementation of ["Defense against Univ
 
 <img src="https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/assets/Teaser.png" width="50%">
 
-## My environment
+## Environment
 - Python 2.7
 - Tensorflow 1.4.0
 

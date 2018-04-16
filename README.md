@@ -45,10 +45,8 @@ Directory structure of `--pert_test_dir`:
 
 
 ## References
-[LTS4 Universal project](https://github.com/LTS4/universal)
-
-[Taehoon Kim's simGAN code](https://github.com/carpedm20/simulated-unsupervised-tensorflow)
-
-[David Sandberg's facenet code](https://github.com/davidsandberg/facenet)
+- [LTS4 Universal project](https://github.com/LTS4/universal)
+- [Taehoon Kim's simGAN code](https://github.com/carpedm20/simulated-unsupervised-tensorflow)
+- [David Sandberg's facenet code](https://github.com/davidsandberg/facenet)
 
 

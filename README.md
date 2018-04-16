@@ -44,3 +44,9 @@ Directory structure of `--pert_test_dir`:
 2. Run [TRAINING script](https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/Inception/TRAIN_SCRIPT.sh).
 
 
+## References
+[LTS4 Universal project](https://github.com/LTS4/universal)
+[Taehoon Kim's simGAN code](https://github.com/carpedm20/simulated-unsupervised-tensorflow)
+[David Sandberg's facenet code](https://github.com/davidsandberg/facenet)
+
+

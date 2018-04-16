@@ -12,7 +12,7 @@ This repository contains the Tensorflow implementation of ["Defense against Univ
 
 1. Download pre-trained [Inception PRN models](https://drive.google.com/drive/folders/1hP8l1vwCVCHfqKGOHu2Fyk_e9x5CpyoL?usp=sharing) from google drive.
 
-2. Edit TESTING [script](https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/Inception/TESTING_fooling_rate/TEST_SCRIPT.sh), set -`-data_dir` to the direcotry of clean images, set `--perturb_dir` to the base pertubation directory, and set`--pert_test_dir` to the TESTING perturbation folder.
+2. Edit TESTING [script](https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/Inception/TESTING_fooling_rate/TEST_SCRIPT.sh), set -`-data_dir` to the direcotry of clean images, set `--perturb_dir` to the base pertubation directory, and set `--pert_test_dir` to the TESTING perturbation folder.
 
 Directory structure of `-data_dir`:
 
@@ -38,5 +38,9 @@ Directory structure of `--pert_test_dir`:
 
 
 ### TRAINING
+
+1. Edit TRAINING [configuration](https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/Inception/config.py). Set `--data_dir` to clean images, note that `--data_dir_1`~`--data_dir_4` are the augmentation images. `--perturb_dir` and `--pert_train_dir` have similar reference as in TESTING.
+
+2. Run TRAINING [script](https://github.com/liujianee/Pertrubation_Rectifying_Network/blob/master/Inception/TRAIN_SCRIPT.sh)
 
 

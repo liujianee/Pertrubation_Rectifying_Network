@@ -31,7 +31,7 @@ data_arg.add_argument('--input_width', type=int, default=224)
 data_arg.add_argument('--input_channel', type=int, default=3)
 data_arg.add_argument('--net_type', type=str, default='inception')
 data_arg.add_argument('--perturb_dir', type=str, default='/media/jianl/TOSHIBA-EXT/Projects/Universal_Perturbations/python/')
-data_arg.add_argument('--pert_train_list', type=str, default=['pert_gen_1/universal_10000_0/universal_10000_0_itr_1.npy'])
+#data_arg.add_argument('--pert_train_list', type=str, default=['pert_gen_1/universal_10000_0/universal_10000_0_itr_1.npy'])
 data_arg.add_argument('--pert_train_dir', type=str, default='Perturbations_Inception_Linf_All/')
 data_arg.add_argument('--pert_test_list', type=str,  default=['pert_gen_0/universal_10000_0/universal_10000_0_itr_1.npy'])
 

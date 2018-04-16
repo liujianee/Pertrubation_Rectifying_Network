@@ -37,7 +37,7 @@ class Trainer(object):
     self.net_type = config.net_type
     self.perturb_dir = config.perturb_dir
     self.pert_train_dir = config.pert_train_dir
-    self.pert_test_list = config.pert_test_list
+    #self.pert_test_list = config.pert_test_list
     self.pretrained_model = config.pretrained_model
 
     self.model = Model(config, self.sess)
@@ -174,25 +174,25 @@ class Trainer(object):
 
         print ('training acc is now: %f' % self.sess.run(self.model.prn_accuracy, feed_dict=feed_dict))
 
-    def test_prn():
-      curr_img_batch, curr_lab_batch = self.sess.run([train_image_batch, train_label_batch])
-      #print curr_lab_batch
-      file_perturbation = self.perturb_dir + random.choice(self.pert_test_list)	# Testing
-      v = np.load(file_perturbation)
+    # def test_prn():
+    #   curr_img_batch, curr_lab_batch = self.sess.run([train_image_batch, train_label_batch])
+    #   #print curr_lab_batch
+    #   file_perturbation = self.perturb_dir + random.choice(self.pert_test_list)	# Testing
+    #   v = np.load(file_perturbation)
 
-      curr_img_batch_p = preprocess_image_batch(curr_img_batch)
+    #   curr_img_batch_p = preprocess_image_batch(curr_img_batch)
 
-      for ix, one_img in enumerate(curr_img_batch_p):
-          clipped_v = np.clip(undo_image_avg(curr_img_batch_p[ix,:,:,:]+v[0,:,:,:]), 0, 255) - np.clip(undo_image_avg(curr_img_batch_p[ix,:,:,:]), 0, 255)
-          curr_img_batch_p[ix,:,:,:] = curr_img_batch_p[ix,:,:,:] + clipped_v[None, :, :, :]
+    #   for ix, one_img in enumerate(curr_img_batch_p):
+    #       clipped_v = np.clip(undo_image_avg(curr_img_batch_p[ix,:,:,:]+v[0,:,:,:]), 0, 255) - np.clip(undo_image_avg(curr_img_batch_p[ix,:,:,:]), 0, 255)
+    #       curr_img_batch_p[ix,:,:,:] = curr_img_batch_p[ix,:,:,:] + clipped_v[None, :, :, :]
 
-      feed_dict = {
-        self.model.P_x: curr_img_batch_p,
-        self.model.P_y: curr_lab_batch
-      }
+    #   feed_dict = {
+    #     self.model.P_x: curr_img_batch_p,
+    #     self.model.P_y: curr_lab_batch
+    #   }
 
-      res = self.model.test_prn(self.sess, feed_dict, self._summary_writer, with_output=True)
-      self._summary_writer = self._get_summary_writer(res)
+    #   res = self.model.test_prn(self.sess, feed_dict, self._summary_writer, with_output=True)
+    #   self._summary_writer = self._get_summary_writer(res)
 
     for step in trange(self.max_step, desc="Train prn"):
       train_prn()
